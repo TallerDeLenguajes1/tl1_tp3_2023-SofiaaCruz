@@ -4,7 +4,7 @@
 
 int main(){
 
-    char **nombres;
+    char **nombres, *aux;
     int i;
 
     nombres = (char **)malloc(5 * sizeof(char *));
