@@ -5,11 +5,16 @@
 int main(){
 
     char **nombres, *aux;
-    int i;
+    int i, num;
 
-    nombres = (char **)malloc(5 * sizeof(char *));
+    printf("Indique cuantos nombres desea ingresar >> ");
+    scanf("%d", &num);
 
-    for(i = 0; i < 5; i++){
+    fflush(stdin);
+
+    nombres = (char **)malloc(num * sizeof(char *));
+
+    for(i = 0; i < num; i++){
 
         nombres[i]=(char *)malloc(10 * sizeof(char));
         printf("\nIngrese el nombre N%c %d ",248, i+1);
@@ -19,7 +24,7 @@ int main(){
 
     printf("\n>>>>Nombres ingresados<<<<");
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < num; i++){
         printf("\n%d) ", i+1);
         puts(nombres[i]);
     }
